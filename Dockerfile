@@ -21,11 +21,11 @@ RUN apt-get install -y zip unzip
 RUN apt-get install -y php7.0-zip
 
 # Create user
-RUN groupadd -r -g 1000 ronaldo && \
-    useradd -mr -c "Ronaldo" -d "/app" -g 1000 -u 1000 ronaldo
+RUN groupadd -r -g 1000 laravel && \
+    useradd -mr -c "Laravel" -d "/app" -g 1000 -u 1000 laravel
 
 # App dir
-USER ronaldo
+USER laravel
 RUN mkdir -p /app
 WORKDIR /app
 
